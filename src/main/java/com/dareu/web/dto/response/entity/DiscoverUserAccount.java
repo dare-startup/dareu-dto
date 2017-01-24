@@ -9,19 +9,21 @@ public class DiscoverUserAccount {
     private String name; 
     private int coins; 
     private int uscore; 
-    private String imageUrl;
-    private String userSinceDate; 
+    private String imageUrl; 
+    private int dares; 
+    private int responses; 
+    private boolean requestSent; 
+    private boolean requestReceived; 
 
     public DiscoverUserAccount() {
     }
 
-    public DiscoverUserAccount(String id, String name, int coins, int uscore, String imageUrl, String userSinceDate) {
+    public DiscoverUserAccount(String id, String name, int coins, int uscore, String imageUrl) {
         this.id = id;
         this.name = name;
         this.coins = coins;
         this.uscore = uscore;
         this.imageUrl = imageUrl;
-        this.userSinceDate = userSinceDate;
     }
 
     public String getId() {
@@ -64,12 +66,36 @@ public class DiscoverUserAccount {
         this.imageUrl = imageUrl;
     }
 
-    public String getUserSinceDate() {
-        return userSinceDate;
+    public int getDares() {
+        return dares;
     }
 
-    public void setUserSinceDate(String userSinceDate) {
-        this.userSinceDate = userSinceDate;
+    public void setDares(int dares) {
+        this.dares = dares;
+    }
+
+    public int getResponses() {
+        return responses;
+    }
+
+    public void setResponses(int responses) {
+        this.responses = responses;
+    }
+
+    public boolean isRequestSent() {
+        return requestSent;
+    }
+
+    public void setRequestSent(boolean requestSent) {
+        this.requestSent = requestSent;
+    }
+
+    public boolean isRequestReceived() {
+        return requestReceived;
+    }
+
+    public void setRequestReceived(boolean requestReceived) {
+        this.requestReceived = requestReceived;
     }
     
     
