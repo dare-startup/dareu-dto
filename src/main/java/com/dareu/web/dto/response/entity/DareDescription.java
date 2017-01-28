@@ -11,6 +11,7 @@ public class DareDescription {
     private String category; 
     private String estimatedDareTime; 
     private String creationDate; 
+    private UserDescription challenger; 
 
     public DareDescription() {
     }
@@ -71,6 +72,12 @@ public class DareDescription {
     public void setCreationDate(String creationDate) {
         this.creationDate = creationDate;
     }
-    
-    
+
+    public UserDescription getChallenger() {
+        return challenger;
+    }
+
+    public void setChallenger(UserDescription challenger) {
+        this.challenger = challenger;
+    }
 }
