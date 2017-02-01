@@ -5,7 +5,9 @@ package com.dareu.web.dto.response.message;
  * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
  */
 public enum MessageType {
-    NEW_DARE("newDareNotificationMessage");
+    NEW_DARE("newDareNotificationMessage"),
+    CONNECTION_REQUEST("newConnectionRequestMessage"), 
+    CONNECT_CONFIRMATION_MESSAGE("connectConfirmationMessage");
     
     String value; 
     MessageType(String value){
