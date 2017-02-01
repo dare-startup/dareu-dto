@@ -12,4 +12,8 @@ public abstract class AbstractMessage {
     public AbstractMessage(MessageType messageType){
         this.messageType = messageType.toString(); 
     }
+
+    public String getMessageType() {
+        return messageType;
+    }
 }
