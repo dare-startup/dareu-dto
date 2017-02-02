@@ -1,6 +1,6 @@
 package com.dareu.web.dto.response.entity;
 
-public class FriendshipResponse {
+public class ConnectionResponse {
 
 	private String id;
 	private String name;
@@ -9,12 +9,12 @@ public class FriendshipResponse {
 	private Long dareCount;
 	private Long videoResponsesCount;
 	
-	public FriendshipResponse(){}
-	public FriendshipResponse(final String id, final String name){
+	public ConnectionResponse(){}
+	public ConnectionResponse(final String id, final String name){
 		this.id = id;
 		this.name = name;
 	}
-	public FriendshipResponse(final String id, final String name, final Long dareCount, final Long videoCount){
+	public ConnectionResponse(final String id, final String name, final Long dareCount, final Long videoCount){
 		this.id = id;
 		this.name = name;
 		this.dareCount = dareCount;
