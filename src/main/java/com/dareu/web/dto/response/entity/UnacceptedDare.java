@@ -9,6 +9,7 @@ public class UnacceptedDare {
     private String name; 
     private String description; 
     private String creationDate; 
+    private int timer;
     private UserDescription challenger; 
 
     public UnacceptedDare() {
@@ -60,6 +61,14 @@ public class UnacceptedDare {
 
     public void setChallenger(UserDescription challenger) {
         this.challenger = challenger;
+    }
+
+    public int getTimer() {
+        return timer;
+    }
+
+    public void setTimer(int timer) {
+        this.timer = timer;
     }
     
     
