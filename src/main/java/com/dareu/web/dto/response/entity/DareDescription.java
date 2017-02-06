@@ -12,6 +12,7 @@ public class DareDescription {
     private String estimatedDareTime; 
     private String creationDate; 
     private UserDescription challenger; 
+    private boolean completed; 
 
     public DareDescription() {
     }
@@ -80,4 +81,13 @@ public class DareDescription {
     public void setChallenger(UserDescription challenger) {
         this.challenger = challenger;
     }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+    
 }
