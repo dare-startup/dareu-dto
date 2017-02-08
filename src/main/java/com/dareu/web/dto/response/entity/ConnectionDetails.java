@@ -7,11 +7,9 @@ package com.dareu.web.dto.response.entity;
 public class ConnectionDetails {
     private String requestedUserId;
     private String requestedUserName; 
-    private String requestedUserImageUrl; 
     
     private String userId;
     private String userName; 
-    private String userImageUrl; 
     
     private String creationDate; 
     private boolean accepted; 
@@ -35,13 +33,7 @@ public class ConnectionDetails {
         this.requestedUserName = requestedUserName;
     }
 
-    public String getRequestedUserImageUrl() {
-        return requestedUserImageUrl;
-    }
-
-    public void setRequestedUserImageUrl(String requestedUserImageUrl) {
-        this.requestedUserImageUrl = requestedUserImageUrl;
-    }
+    
 
     public String getUserId() {
         return userId;
@@ -57,14 +49,6 @@ public class ConnectionDetails {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getUserImageUrl() {
-        return userImageUrl;
-    }
-
-    public void setUserImageUrl(String userImageUrl) {
-        this.userImageUrl = userImageUrl;
     }
 
     public String getCreationDate() {

@@ -15,12 +15,11 @@ public class UserAccount {
     private int uscore; 
     private int coins; 
     private String userSinceDate; 
-    private String imageUrl; 
 
     public UserAccount() {
     }
 
-    public UserAccount(String id, String name, String email, String token, boolean verified, String password, String role, int uscore, int coins, String userSinceDate, String imageUrl) {
+    public UserAccount(String id, String name, String email, String token, boolean verified, String password, String role, int uscore, int coins, String userSinceDate) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -31,7 +30,6 @@ public class UserAccount {
         this.uscore = uscore;
         this.coins = coins;
         this.userSinceDate = userSinceDate;
-        this.imageUrl = imageUrl;
     }
 
     
@@ -116,14 +114,6 @@ public class UserAccount {
 
     public void setUserSinceDate(String userSinceDate) {
         this.userSinceDate = userSinceDate;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
     
     

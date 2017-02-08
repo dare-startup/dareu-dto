@@ -7,16 +7,14 @@ package com.dareu.web.dto.response.entity;
 public class UserDescription {
     private String id; 
     private String name; 
-    private String imageUrl; 
     private String userSinceDate; 
 
     public UserDescription() {
     }
 
-    public UserDescription(String id, String name, String imageUrl, String userSinceDate) {
+    public UserDescription(String id, String name, String userSinceDate) {
         this.id = id;
         this.name = name;
-        this.imageUrl = imageUrl;
         this.userSinceDate = userSinceDate;
     }
 
@@ -34,14 +32,6 @@ public class UserDescription {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
     public String getUserSinceDate() {

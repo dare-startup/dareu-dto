@@ -9,7 +9,6 @@ public class DiscoverUserAccount {
     private String name; 
     private int coins; 
     private int uscore; 
-    private String imageUrl; 
     private int dares; 
     private int responses; 
     private boolean requestSent; 
@@ -18,12 +17,11 @@ public class DiscoverUserAccount {
     public DiscoverUserAccount() {
     }
 
-    public DiscoverUserAccount(String id, String name, int coins, int uscore, String imageUrl) {
+    public DiscoverUserAccount(String id, String name, int coins, int uscore) {
         this.id = id;
         this.name = name;
         this.coins = coins;
         this.uscore = uscore;
-        this.imageUrl = imageUrl;
     }
 
     public String getId() {
@@ -56,14 +54,6 @@ public class DiscoverUserAccount {
 
     public void setUscore(int uscore) {
         this.uscore = uscore;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
     public int getDares() {

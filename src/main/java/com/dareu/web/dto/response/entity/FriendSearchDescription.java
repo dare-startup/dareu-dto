@@ -6,15 +6,13 @@ package com.dareu.web.dto.response.entity;
  */
 public class FriendSearchDescription {
     private String id; 
-    private String imageUrl; 
     private String name; 
 
     public FriendSearchDescription() {
     }
 
-    public FriendSearchDescription(String id, String imageUrl, String name) {
+    public FriendSearchDescription(String id, String name) {
         this.id = id;
-        this.imageUrl = imageUrl;
         this.name = name;
     }
 
@@ -24,14 +22,6 @@ public class FriendSearchDescription {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
     }
 
     public String getName() {
