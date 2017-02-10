@@ -7,7 +7,8 @@ package com.dareu.web.dto.response.message;
 public enum MessageType {
     NEW_DARE("newDareNotificationMessage"),
     CONNECTION_REQUEST("newConnectionRequestMessage"), 
-    CONNECT_CONFIRMATION_MESSAGE("connectConfirmationMessage");
+    CONNECT_CONFIRMATION_MESSAGE("connectConfirmationMessage"), 
+    DARE_RESPONSE_UPLOADED("dareResponseUploadedMessage");
     
     String value; 
     MessageType(String value){
