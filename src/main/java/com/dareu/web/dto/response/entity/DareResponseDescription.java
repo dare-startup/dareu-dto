@@ -7,7 +7,7 @@ package com.dareu.web.dto.response.entity;
 public class DareResponseDescription {
     private String id; 
     private DareDescription dare; 
-    private String thumbAvailable; 
+    private boolean thumbAvailable; 
 
     public DareResponseDescription() {
     }
@@ -28,11 +28,11 @@ public class DareResponseDescription {
         this.dare = dare;
     }
 
-    public String getThumbAvailable() {
+    public boolean isThumbAvailable() {
         return thumbAvailable;
     }
 
-    public void setThumbAvailable(String thumbAvailable) {
+    public void setThumbAvailable(boolean thumbAvailable) {
         this.thumbAvailable = thumbAvailable;
     }
     
