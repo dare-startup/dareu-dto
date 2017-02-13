@@ -9,13 +9,15 @@ import java.io.InputStream;
 public class DareUploadRequest {
     private String dareId; 
     private InputStream stream; 
+    private String comment; 
 
     public DareUploadRequest() {
     }
 
-    public DareUploadRequest(String dareId, InputStream stream) {
+    public DareUploadRequest(String dareId, InputStream stream, String comment) {
         this.dareId = dareId;
         this.stream = stream;
+        this.comment = comment; 
     }
 
     public String getDareId() {
@@ -32,6 +34,14 @@ public class DareUploadRequest {
 
     public void setStream(InputStream stream) {
         this.stream = stream;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
     
     
