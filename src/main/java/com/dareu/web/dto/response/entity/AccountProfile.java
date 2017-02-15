@@ -10,6 +10,7 @@ public class AccountProfile {
     private String id; 
     private String name; 
     private String userSinceDate; 
+    private String email; 
     private boolean profileImageAvailable; 
     private int uscore; 
     private int coins; 
@@ -81,6 +82,14 @@ public class AccountProfile {
 
     public void setCreatedResponses(Page<DareResponseDescription> createdResponses) {
         this.createdResponses = createdResponses;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
     
