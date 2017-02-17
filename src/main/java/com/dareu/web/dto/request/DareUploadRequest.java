@@ -10,14 +10,16 @@ public class DareUploadRequest {
     private String dareId; 
     private InputStream stream; 
     private String comment; 
+    private InputStream thumb;
 
     public DareUploadRequest() {
     }
 
-    public DareUploadRequest(String dareId, InputStream stream, String comment) {
+    public DareUploadRequest(String dareId, InputStream stream, String comment, InputStream thumb) {
         this.dareId = dareId;
         this.stream = stream;
         this.comment = comment; 
+        this.thumb = thumb;
     }
 
     public String getDareId() {
@@ -42,6 +44,14 @@ public class DareUploadRequest {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public InputStream getThumb() {
+        return thumb;
+    }
+
+    public void setThumb(InputStream thumb) {
+        this.thumb = thumb;
     }
     
     
