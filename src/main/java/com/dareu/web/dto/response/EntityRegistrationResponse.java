@@ -58,7 +58,8 @@ public class EntityRegistrationResponse {
 		ACCOUNT("account"), 
 		DARE_RESPONSE("dareResponse"),
 		CATEGORY("category"),
-		FRIENDSHIP_REQUEST("friendshipRequest"), 
+                DARE_FLAG("dareFlag"),
+		FRIENDSHIP_REQUEST("friendshipRequest"),
 		FRIENDSHIP_RESPONSE("friendshipResponse"); //TODO: KEEP FILLING HERE..
 		
 		String value; 
