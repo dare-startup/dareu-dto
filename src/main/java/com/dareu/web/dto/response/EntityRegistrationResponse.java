@@ -60,7 +60,8 @@ public class EntityRegistrationResponse {
 		CATEGORY("category"),
                 DARE_FLAG("dareFlag"),
 		FRIENDSHIP_REQUEST("friendshipRequest"),
-		FRIENDSHIP_RESPONSE("friendshipResponse"); //TODO: KEEP FILLING HERE..
+		FRIENDSHIP_RESPONSE("friendshipResponse"),
+                CONTACT_MESSAGE("contactMessage"); //TODO: KEEP FILLING HERE..
 		
 		String value; 
 		RegistrationType(String value){
