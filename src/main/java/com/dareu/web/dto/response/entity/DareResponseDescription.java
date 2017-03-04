@@ -8,6 +8,10 @@ public class DareResponseDescription {
     private String id; 
     private DareDescription dare; 
     private boolean thumbAvailable; 
+    private int views; 
+    private int claps; 
+    private UserDescription user; 
+    private String lastUpdate; 
 
     public DareResponseDescription() {
     }
@@ -34,6 +38,38 @@ public class DareResponseDescription {
 
     public void setThumbAvailable(boolean thumbAvailable) {
         this.thumbAvailable = thumbAvailable;
+    }
+
+    public int getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
+    }
+
+    public int getClaps() {
+        return claps;
+    }
+
+    public void setClaps(int claps) {
+        this.claps = claps;
+    }
+
+    public UserDescription getUser() {
+        return user;
+    }
+
+    public void setUser(UserDescription user) {
+        this.user = user;
+    }
+
+    public String getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(String lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
     
     
