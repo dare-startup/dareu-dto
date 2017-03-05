@@ -12,6 +12,7 @@ public class DareResponseDescription {
     private int claps; 
     private UserDescription user; 
     private String lastUpdate; 
+    private String uploadDate; 
 
     public DareResponseDescription() {
     }
@@ -70,6 +71,14 @@ public class DareResponseDescription {
 
     public void setLastUpdate(String lastUpdate) {
         this.lastUpdate = lastUpdate;
+    }
+
+    public String getUploadDate() {
+        return uploadDate;
+    }
+
+    public void setUploadDate(String uploadDate) {
+        this.uploadDate = uploadDate;
     }
     
     
