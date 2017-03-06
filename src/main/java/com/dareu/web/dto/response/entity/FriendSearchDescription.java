@@ -7,7 +7,7 @@ package com.dareu.web.dto.response.entity;
 public class FriendSearchDescription {
     private String id; 
     private String name; 
-    private boolean profileImageAvailable; 
+    private String imageUrl;
 
     public FriendSearchDescription() {
     }
@@ -33,11 +33,13 @@ public class FriendSearchDescription {
         this.name = name;
     }
 
-    public boolean isProfileImageAvailable() {
-        return profileImageAvailable;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setProfileImageAvailable(boolean profileImageAvailable) {
-        this.profileImageAvailable = profileImageAvailable;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
+    
+    
 }

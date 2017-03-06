@@ -13,7 +13,7 @@ public class DiscoverUserAccount {
     private int responses; 
     private boolean requestSent; 
     private boolean requestReceived; 
-    private boolean profileImageAvailable; 
+    private String imageUrl;
 
     public DiscoverUserAccount() {
     }
@@ -89,13 +89,13 @@ public class DiscoverUserAccount {
         this.requestReceived = requestReceived;
     }
 
-    public boolean isProfileImageAvailable() {
-        return profileImageAvailable;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setProfileImageAvailable(boolean profileImageAvailable) {
-        this.profileImageAvailable = profileImageAvailable;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
-    
+
     
 }

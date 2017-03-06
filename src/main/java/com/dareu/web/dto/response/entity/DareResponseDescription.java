@@ -7,7 +7,8 @@ package com.dareu.web.dto.response.entity;
 public class DareResponseDescription {
     private String id; 
     private DareDescription dare; 
-    private boolean thumbAvailable; 
+    private String thumbUrl;
+    private String videoUrl;
     private int views; 
     private int claps; 
     private UserDescription user; 
@@ -33,13 +34,15 @@ public class DareResponseDescription {
         this.dare = dare;
     }
 
-    public boolean isThumbAvailable() {
-        return thumbAvailable;
+    public String getThumbUrl() {
+        return thumbUrl;
     }
 
-    public void setThumbAvailable(boolean thumbAvailable) {
-        this.thumbAvailable = thumbAvailable;
+    public void setThumbUrl(String thumbUrl) {
+        this.thumbUrl = thumbUrl;
     }
+
+    
 
     public int getViews() {
         return views;
@@ -79,6 +82,14 @@ public class DareResponseDescription {
 
     public void setUploadDate(String uploadDate) {
         this.uploadDate = uploadDate;
+    }
+
+    public String getVideoUrl() {
+        return videoUrl;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
     }
     
     

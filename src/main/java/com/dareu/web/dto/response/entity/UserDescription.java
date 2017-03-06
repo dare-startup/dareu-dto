@@ -8,7 +8,7 @@ public class UserDescription {
     private String id; 
     private String name; 
     private String userSinceDate; 
-    private boolean profileImageAvailable; 
+    private String imageUrl;
 
     public UserDescription() {
     }
@@ -43,15 +43,13 @@ public class UserDescription {
         this.userSinceDate = userSinceDate;
     }
 
-    public boolean isProfileImageAvailable() {
-        return profileImageAvailable;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setProfileImageAvailable(boolean profileImageAvailable) {
-        this.profileImageAvailable = profileImageAvailable;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
-
-   
     
     
 }

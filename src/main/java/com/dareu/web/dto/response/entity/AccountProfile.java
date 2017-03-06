@@ -11,7 +11,7 @@ public class AccountProfile {
     private String name; 
     private String userSinceDate; 
     private String email; 
-    private boolean profileImageAvailable; 
+    private String imageUrl;
     private int uscore; 
     private int coins; 
     private Page<CreatedDare> createdDares; 
@@ -42,14 +42,6 @@ public class AccountProfile {
 
     public void setUserSinceDate(String userSinceDate) {
         this.userSinceDate = userSinceDate;
-    }
-
-    public boolean isProfileImageAvailable() {
-        return profileImageAvailable;
-    }
-
-    public void setProfileImageAvailable(boolean profileImageAvailable) {
-        this.profileImageAvailable = profileImageAvailable;
     }
 
     public int getUscore() {
@@ -90,6 +82,14 @@ public class AccountProfile {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
     
     
