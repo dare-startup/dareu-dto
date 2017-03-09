@@ -86,7 +86,7 @@ public interface DareClientService {
      * @param token
      * @return
      */
-    @GET("dare/expired")
+    @POST("dare/expired")
     Call<UpdatedEntityResponse> setDareExpiration(@Query(value = "dareId") String dareId,
                                                   @Header(value = "Authorization")String token);
 

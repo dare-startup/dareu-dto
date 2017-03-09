@@ -16,7 +16,22 @@ public class RetroFactory {
 
     public static Retrofit getInstance() {
         if (retrofitInstance == null) {
-            OkHttpClient client = new OkHttpClient();
+            OkHttpClient client = new OkHttpClient() {
+                @Override
+                public int readTimeoutMillis() {
+                    return 300000; // 5 minutes 
+                }
+
+                @Override
+                public int writeTimeoutMillis() {
+                    return 300000; // 5 minutes
+                }
+
+                @Override
+                public int connectTimeoutMillis() {
+                    return 120000; // 2 minutes
+                }
+            };
 
             retrofitInstance = new Retrofit.Builder()
                     .addConverterFactory(GsonConverterFactory.create())
