@@ -9,6 +9,7 @@ public class CommentDescription {
     private String comment; 
     private String commentDate; 
     private int likes;
+    private UserDescription user;
     private DareResponseDescription response; 
 
     public CommentDescription() {
@@ -52,6 +53,14 @@ public class CommentDescription {
 
     public void setResponse(DareResponseDescription response) {
         this.response = response;
+    }
+
+    public UserDescription getUser() {
+        return user;
+    }
+
+    public void setUser(UserDescription user) {
+        this.user = user;
     }
     
     

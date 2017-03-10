@@ -3,10 +3,12 @@ package com.dareu.web.dto.client;
 import com.dareu.web.dto.request.CreateDareRequest;
 import com.dareu.web.dto.request.DareConfirmationRequest;
 import com.dareu.web.dto.request.FlagDareRequest;
+import com.dareu.web.dto.request.NewCommentRequest;
 import com.dareu.web.dto.response.EntityRegistrationResponse;
 import com.dareu.web.dto.response.UpdatedEntityResponse;
 import com.dareu.web.dto.response.entity.ActiveDare;
 import com.dareu.web.dto.response.entity.CategoryDescription;
+import com.dareu.web.dto.response.entity.CommentDescription;
 import com.dareu.web.dto.response.entity.DareDescription;
 import com.dareu.web.dto.response.entity.DareResponseDescription;
 import com.dareu.web.dto.response.entity.Page;
@@ -147,7 +149,37 @@ public interface DareClientService {
     Call<DareResponseDescription> findDareResponseDescription(@Query(value = "id")String id,
                                                               @Header(value = "Authorization") String token);
     
+    /**
+     * Discover dares
+     * @param pageNumber
+     * @param token
+     * @return 
+     */
     @GET("dare/discover")
     Call<Page<DareDescription>> discoverDares(@Query(value = "pageNumber")int pageNumber, 
                                         @Header(value = "Authorization")String token);
+    
+    
+    /**
+     * Creates a new comment on a response
+     * @param request
+     * @param token
+     * @return 
+     */
+    @POST("dare/response/comment/create")
+    Call<EntityRegistrationResponse> createResponseComment(@Body NewCommentRequest request, 
+                                                           @Header(value = "Authorization")String token);
+    
+    /**
+     * Get a response page comments using a page number
+     * @param pageNumber
+     * @param responseId
+     * @return 
+     */
+    @GET("dare/response/comment/find")
+    Call<Page<CommentDescription>> getResponseComments(@Query(value = "pageNumber")int pageNumber, 
+                                                       @Query(value = "responseId")String responseId);
+    
+    
+    
 }

@@ -11,6 +11,7 @@ public class DareResponseDescription {
     private String videoUrl;
     private int views; 
     private int claps; 
+    private int comments;
     private UserDescription user; 
     private String lastUpdate; 
     private String uploadDate; 
@@ -90,6 +91,14 @@ public class DareResponseDescription {
 
     public void setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
+    }
+
+    public int getComments() {
+        return comments;
+    }
+
+    public void setComments(int comments) {
+        this.comments = comments;
     }
     
     
