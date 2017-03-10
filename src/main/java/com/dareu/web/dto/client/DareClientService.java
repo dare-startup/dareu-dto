@@ -1,5 +1,6 @@
 package com.dareu.web.dto.client;
 
+import com.dareu.web.dto.request.ClapRequest;
 import com.dareu.web.dto.request.CreateDareRequest;
 import com.dareu.web.dto.request.DareConfirmationRequest;
 import com.dareu.web.dto.request.FlagDareRequest;
@@ -174,12 +175,35 @@ public interface DareClientService {
      * Get a response page comments using a page number
      * @param pageNumber
      * @param responseId
+     * @param token
      * @return 
      */
-    @GET("dare/response/comment/find")
+    @GET("dare/response/comment/")
     Call<Page<CommentDescription>> getResponseComments(@Query(value = "pageNumber")int pageNumber, 
-                                                       @Query(value = "responseId")String responseId);
+                                                       @Query(value = "responseId")String responseId, 
+                                                       @Header(value = "Authorization")String token);
     
+    @GET("dare/response/comment/find")
+    Call<CommentDescription> findCommentDescription(@Query(value = "commentId")String commentId, 
+                                                    @Header(value = "")String token); 
     
+    /**
+     * Claps a response 
+     * @param request
+     * @param token
+     * @return 
+     */
+    @POST("dare/response/clap")
+    Call<UpdatedEntityResponse> clapResponse(@Body ClapRequest request, 
+                                             @Header(value = "Authorization")String token); 
     
+    /**
+     * Increments a response view count
+     * @param responseId
+     * @param token
+     * @return 
+     */
+    @POST("dare/response/view")
+    Call<UpdatedEntityResponse> viewedResponse(@Query(value = "responseId")String responseId, 
+                                               @Header("Authorization")String token); 
 }

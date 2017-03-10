@@ -9,7 +9,8 @@ public enum MessageType {
     CONNECTION_REQUEST("newConnectionRequestMessage"), 
     CONNECT_CONFIRMATION_MESSAGE("connectConfirmationMessage"), 
     DARE_RESPONSE_UPLOADED("dareResponseUploadedMessage"), 
-    QUEUED_DARE_MESSAGE("queuedDareMessage");
+    QUEUED_DARE_MESSAGE("queuedDareMessage"), 
+    CLAPPED_RESPONSE_MESSAGE("clappedResponseMessage");
     
     String value; 
     MessageType(String value){
