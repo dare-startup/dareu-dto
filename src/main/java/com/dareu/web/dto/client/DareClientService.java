@@ -185,7 +185,7 @@ public interface DareClientService {
     
     @GET("dare/response/comment/find")
     Call<CommentDescription> findCommentDescription(@Query(value = "commentId")String commentId, 
-                                                    @Header(value = "")String token); 
+                                                    @Header(value = "Authorization")String token); 
     
     /**
      * Claps a response 

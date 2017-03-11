@@ -8,6 +8,8 @@ import com.dareu.web.dto.response.entity.ConnectionDetails;
 import com.dareu.web.dto.response.entity.DiscoverUserAccount;
 import com.dareu.web.dto.response.entity.FriendSearchDescription;
 import com.dareu.web.dto.response.entity.Page;
+import com.dareu.web.dto.response.entity.PendingFriendshipRequests;
+import com.dareu.web.dto.response.entity.UserDescription;
 
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -47,6 +49,10 @@ public interface AccountClientService {
                                                               @Query(value = "accepted") boolean accepted,
                                                               @Header(value = "Authorization") String token);
 
+    @GET("account/friendship/")
+    Call<PendingFriendshipRequests> getConnectionRequests(@Query("pageNumber")int pageNumber, 
+                                                        @Header(value = "Authorization")String token); 
+    
     /**
      * Get connection details
      * @param id
