@@ -5,6 +5,7 @@ package com.dareu.web.dto.response.entity;
  * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
  */
 public class ConnectionRequest {
+    private ConnectioRequestType type; 
     private String connectionId; 
     private UserDescription user; 
 
@@ -26,6 +27,18 @@ public class ConnectionRequest {
     public void setUser(UserDescription user) {
         this.user = user;
     }
+
+    public ConnectioRequestType getType() {
+        return type;
+    }
+
+    public void setType(ConnectioRequestType type) {
+        this.type = type;
+    }
     
     
+    
+    public static enum ConnectioRequestType{
+        SENT, RECEIVED
+    }
 }
