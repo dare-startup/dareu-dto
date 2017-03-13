@@ -13,6 +13,7 @@ import com.dareu.web.dto.response.entity.Page;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Multipart;
@@ -76,6 +77,13 @@ public interface AccountClientService {
     Call<Page<DiscoverUserAccount>> discoverUsers(@Query(value = "pageNumber") int pageNumber,
                                                   @Header(value = "Authorization")String token);
 
+    /**
+     * 
+     * @param query
+     * @param pageNumber
+     * @param token
+     * @return 
+     */
     @GET("account/friends/find")
     Call<Page<FriendSearchDescription>> findFriends(@Query(value = "q") String query, 
             @Query(value = "pageNumber") int pageNumber, @Header("Authorization")String token);
@@ -110,9 +118,24 @@ public interface AccountClientService {
     Call<UpdatedEntityResponse> updateFcmId(@Query(value = "regId")String regId,
                                             @Header(value = "Authorization")String token);
     
+    /**
+     * 
+     * @param request
+     * @param token
+     * @return 
+     */
     @POST("account/changeEmailAddress")
     Call<UpdatedEntityResponse> updateEmailAddress(@Body ChangeEmailAddressRequest request, 
                                                    @Header(value = "Authorization")String token);
     
     
+    /**
+     * 
+     * @param connId
+     * @param token
+     * @return 
+     */
+    @DELETE("account/friendship/")
+    Call<UpdatedEntityResponse> cancelFriendshipRequest(@Query(value = "connectionId")String connId, 
+                                    @Header(value = "Authorization")String token); 
 }
