@@ -206,4 +206,14 @@ public interface DareClientService {
     @POST("dare/response/view")
     Call<UpdatedEntityResponse> viewedResponse(@Query(value = "responseId")String responseId, 
                                                @Header("Authorization")String token); 
+    
+    /**
+     * Get a Page of DareResponseDescriptions from a given user using authentication token
+     * @param pageNumber
+     * @param token
+     * @return 
+     */
+    @GET("dare/response/")
+    Call<Page<DareResponseDescription>> findUserResponses(@Query(value = "pageNumber")int pageNumber, 
+                                                          @Header(value = "Authorization")String token);
 }
