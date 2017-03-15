@@ -11,7 +11,6 @@ public class ResourceAvailableResponse {
 	
 	public ResourceAvailableResponse(boolean isAvailable, String message,
 			String date) {
-		super();
 		this.isAvailable = isAvailable;
 		this.message = message;
 		this.date = date;
