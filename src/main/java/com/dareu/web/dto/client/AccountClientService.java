@@ -84,7 +84,7 @@ public interface AccountClientService {
      * @param token
      * @return 
      */
-    @GET("account/friends/find")
+    @GET("account/friendship/accepted/find")
     Call<Page<FriendSearchDescription>> findFriends(@Query(value = "q") String query, 
             @Query(value = "pageNumber") int pageNumber, @Header("Authorization")String token);
 

@@ -54,6 +54,7 @@ public class EntityRegistrationResponse {
 	}
 	
 	public static enum RegistrationType{
+                ANCHOR("responseAnchor"),
 		DARE("dare"), 
 		ACCOUNT("account"), 
 		DARE_RESPONSE("dareResponse"),

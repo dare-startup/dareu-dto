@@ -16,7 +16,8 @@ public class SignupRequest {
     private String email; 
     private String password; 
     private String birthday; 
-    private boolean sponsor; 
+    private boolean sponsor;
+    private String fcm;
     
     public SignupRequest() {
     }
@@ -69,7 +70,12 @@ public class SignupRequest {
     public void setSponsor(boolean sponsor) {
         this.sponsor = sponsor;
     }
-    
-    
-    
+
+    public String getFcm() {
+        return fcm;
+    }
+
+    public void setFcm(String fcm) {
+        this.fcm = fcm;
+    }
 }
