@@ -3,6 +3,9 @@ package com.dareu.web.dto.request;
 public class SigninRequest {
 	private String user; 
 	private String password;
+	private SigninType currentSigninType = SigninType.LOCAL;
+    private String googleId;
+
 	public SigninRequest() {
 		
 	}
@@ -24,7 +27,25 @@ public class SigninRequest {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	} 
-	
-	
+	}
+
+    public SigninType getCurrentSigninType() {
+        return currentSigninType;
+    }
+
+    public void setCurrentSigninType(SigninType currentSigninType) {
+        this.currentSigninType = currentSigninType;
+    }
+
+    public String getGoogleId() {
+        return googleId;
+    }
+
+    public void setGoogleId(String googleId) {
+        this.googleId = googleId;
+    }
+
+    public enum SigninType{
+        LOCAL, GOOGLE
+    }
 }
