@@ -39,13 +39,13 @@ public interface AccountClientService {
 
     /**
      * Confirms a connection request
-     * @param userId
+     * @param connectionId
      * @param accepted
      * @param token
      * @return
      */
-    @POST("account/friendship/{userId}/update")
-    Call<EntityRegistrationResponse> confirmConnectionRequest(@Path(value = "userId") String userId,
+    @POST("account/friendship/{connectionId}/update")
+    Call<EntityRegistrationResponse> confirmConnectionRequest(@Path(value = "connectionId") String connectionId,
                                                               @Query(value = "accepted") boolean accepted,
                                                               @Header(value = "Authorization") String token);
 

@@ -5,6 +5,7 @@ public class SigninRequest {
 	private String password;
 	private SigninType currentSigninType = SigninType.LOCAL;
     private String googleId;
+    private String fcmToken;
 
 	public SigninRequest() {
 		
@@ -43,6 +44,14 @@ public class SigninRequest {
 
     public void setGoogleId(String googleId) {
         this.googleId = googleId;
+    }
+
+    public String getFcmToken() {
+        return fcmToken;
+    }
+
+    public void setFcmToken(String fcmToken) {
+        this.fcmToken = fcmToken;
     }
 
     public enum SigninType{

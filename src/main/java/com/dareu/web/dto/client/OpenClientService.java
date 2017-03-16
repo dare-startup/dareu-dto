@@ -50,7 +50,7 @@ public interface OpenClientService {
      * @return
      */
     @POST("open/registerUserGoogle")
-    Call<AuthenticationResponse> signupGoogle(GoogleSignupRequest request);
+    Call<AuthenticationResponse> signupGoogle(@Body GoogleSignupRequest request);
 
     /**
      * Check if an email is available for registration
