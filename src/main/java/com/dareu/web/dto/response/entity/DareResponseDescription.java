@@ -14,7 +14,9 @@ public class DareResponseDescription {
     private int comments;
     private UserDescription user; 
     private String lastUpdate; 
-    private String uploadDate; 
+    private String uploadDate;
+    private boolean clapped;
+    private boolean anchored;
 
     public DareResponseDescription() {
     }
@@ -100,6 +102,20 @@ public class DareResponseDescription {
     public void setComments(int comments) {
         this.comments = comments;
     }
-    
-    
+
+    public boolean isClapped() {
+        return clapped;
+    }
+
+    public void setClapped(boolean clapped) {
+        this.clapped = clapped;
+    }
+
+    public boolean isAnchored() {
+        return anchored;
+    }
+
+    public void setAnchored(boolean anchored) {
+        this.anchored = anchored;
+    }
 }
