@@ -217,7 +217,7 @@ public interface DareClientService {
                                                    @Header(value = "Authorization") String token);
 
     @POST("dare/response/anchor/unpin")
-    Call<EntityRegistrationResponse> unpinAnchorContent(@Query(value = "responseId") String responseId,
+    Call<EntityRegistrationResponse> unpinAnchorContent(@Query(value = "anchorContentId") String responseId,
                                                    @Header(value = "Authorization") String token);
 
     @GET("dare/response/anchor")
