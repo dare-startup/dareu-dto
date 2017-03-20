@@ -5,6 +5,7 @@ package com.dareu.web.dto.response.entity;
  * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
  */
 public class AnchoredDescription {
+    private String anchorId;
     private String anchorDate; 
     private DareResponseDescription content; 
 
@@ -33,6 +34,12 @@ public class AnchoredDescription {
     public void setContent(DareResponseDescription content) {
         this.content = content;
     }
-    
-    
+
+    public String getAnchorId() {
+        return anchorId;
+    }
+
+    public void setAnchorId(String anchorId) {
+        this.anchorId = anchorId;
+    }
 }

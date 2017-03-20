@@ -7,13 +7,7 @@ import com.dareu.web.dto.request.FlagDareRequest;
 import com.dareu.web.dto.request.NewCommentRequest;
 import com.dareu.web.dto.response.EntityRegistrationResponse;
 import com.dareu.web.dto.response.UpdatedEntityResponse;
-import com.dareu.web.dto.response.entity.ActiveDare;
-import com.dareu.web.dto.response.entity.CategoryDescription;
-import com.dareu.web.dto.response.entity.CommentDescription;
-import com.dareu.web.dto.response.entity.DareDescription;
-import com.dareu.web.dto.response.entity.DareResponseDescription;
-import com.dareu.web.dto.response.entity.Page;
-import com.dareu.web.dto.response.entity.UnacceptedDare;
+import com.dareu.web.dto.response.entity.*;
 
 import okhttp3.RequestBody;
 import retrofit2.Call;
@@ -216,4 +210,17 @@ public interface DareClientService {
     @GET("dare/response/")
     Call<Page<DareResponseDescription>> findUserResponses(@Query(value = "pageNumber")int pageNumber, 
                                                           @Header(value = "Authorization")String token);
+
+
+    @POST("dare/response/anchor/create")
+    Call<EntityRegistrationResponse> anchorContent(@Query(value = "responseId") String responseId,
+                                                   @Header(value = "Authorization") String token);
+
+    @POST("dare/response/anchor/unpin")
+    Call<EntityRegistrationResponse> unpinAnchorContent(@Query(value = "responseId") String responseId,
+                                                   @Header(value = "Authorization") String token);
+
+    @GET("dare/response/anchor")
+    Call<Page<AnchoredDescription>> getAnchoredContent(@Query(value = "pageNumber")int pageNumber,
+                                                       @Header(value = "Authorization") String token);
 }
