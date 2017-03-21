@@ -49,10 +49,22 @@ public interface AccountClientService {
                                                               @Query(value = "accepted") boolean accepted,
                                                               @Header(value = "Authorization") String token);
 
+    /**
+     * Get a page of sent pending connection requests
+     * @param pageNumber
+     * @param token
+     * @return
+     */
     @GET("account/friendship/sent")
     Call<Page<ConnectionRequest>> getSentPendingRequests(@Query("pageNumber")int pageNumber, 
-                                                        @Header(value = "Authorization")String token); 
-    
+                                                        @Header(value = "Authorization")String token);
+
+    /**
+     * get a page of received pending connection requests
+     * @param pageNumber
+     * @param token
+     * @return
+     */
     @GET("account/friendship/received")
     Call<Page<ConnectionRequest>> getReceivedPendingRequests(@Query("pageNumber")int pageNumber, 
                                                         @Header(value = "Authorization")String token); 
@@ -137,5 +149,9 @@ public interface AccountClientService {
      */
     @DELETE("account/friendship/")
     Call<UpdatedEntityResponse> cancelFriendshipRequest(@Query(value = "connectionId")String connId, 
-                                    @Header(value = "Authorization")String token); 
+                                    @Header(value = "Authorization")String token);
+
+    @GET("account/profile/{userId}")
+    Call<AccountProfile> getUserAccount(@Path(value = "userId") String userId,
+                                        @Header(value = "Authorization") String token);
 }

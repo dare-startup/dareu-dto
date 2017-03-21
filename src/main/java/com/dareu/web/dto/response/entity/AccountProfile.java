@@ -15,7 +15,8 @@ public class AccountProfile {
     private int uscore; 
     private int coins; 
     private Page<CreatedDare> createdDares; 
-    private Page<DareResponseDescription> createdResponses; 
+    private Page<DareResponseDescription> createdResponses;
+    private Page<FriendSearchDescription> contacts;
 
     public AccountProfile() {
     }
@@ -91,7 +92,12 @@ public class AccountProfile {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
-    
-    
-    
+
+    public Page<FriendSearchDescription> getContacts() {
+        return contacts;
+    }
+
+    public void setContacts(Page<FriendSearchDescription> contacts) {
+        this.contacts = contacts;
+    }
 }
