@@ -212,15 +212,42 @@ public interface DareClientService {
                                                           @Header(value = "Authorization")String token);
 
 
+    /**
+     * Anchor a dare response
+     * @param responseId
+     * @param token
+     * @return
+     */
     @POST("dare/response/anchor/create")
     Call<EntityRegistrationResponse> anchorContent(@Query(value = "responseId") String responseId,
                                                    @Header(value = "Authorization") String token);
 
+    /**
+     * Un pin an anchored response
+     * @param responseId
+     * @param token
+     * @return
+     */
     @POST("dare/response/anchor/unpin")
     Call<EntityRegistrationResponse> unpinAnchorContent(@Query(value = "anchorContentId") String responseId,
                                                    @Header(value = "Authorization") String token);
 
+    /**
+     * Get a page of a user anchored content
+     * @param pageNumber
+     * @param token
+     * @return
+     */
     @GET("dare/response/anchor")
     Call<Page<AnchoredDescription>> getAnchoredContent(@Query(value = "pageNumber")int pageNumber,
                                                        @Header(value = "Authorization") String token);
+
+    /**
+     * Clap a response comment
+     * @param commentId
+     * @return
+     */
+    @POST("dare/response/comment/clap")
+    Call<EntityRegistrationResponse> clapResponseComment(@Query(value = "commentId")String commentId,
+                                                         @Header(value = "Authorization") String token);
 }

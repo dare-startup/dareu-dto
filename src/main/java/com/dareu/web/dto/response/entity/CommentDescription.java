@@ -10,7 +10,9 @@ public class CommentDescription {
     private String commentDate; 
     private int likes;
     private UserDescription user;
-    private DareResponseDescription response; 
+    private DareResponseDescription response;
+    private boolean isClapped;
+    private int claps;
 
     public CommentDescription() {
     }
@@ -62,6 +64,20 @@ public class CommentDescription {
     public void setUser(UserDescription user) {
         this.user = user;
     }
-    
-    
+
+    public boolean isClapped() {
+        return isClapped;
+    }
+
+    public void setClapped(boolean clapped) {
+        isClapped = clapped;
+    }
+
+    public int getClaps() {
+        return claps;
+    }
+
+    public void setClaps(int claps) {
+        this.claps = claps;
+    }
 }

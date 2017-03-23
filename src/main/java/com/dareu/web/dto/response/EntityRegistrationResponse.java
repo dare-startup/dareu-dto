@@ -63,7 +63,8 @@ public class EntityRegistrationResponse {
 		FRIENDSHIP_REQUEST("friendshipRequest"),
 		FRIENDSHIP_RESPONSE("friendshipResponse"),
                 CONTACT_MESSAGE("contactMessage"), 
-                COMMENT("dareResponseComment"); //TODO: KEEP FILLING HERE..
+                COMMENT("dareResponseComment"),
+		COMMENT_CLAP("dareResponseCommentClap");
 		
 		String value; 
 		RegistrationType(String value){
