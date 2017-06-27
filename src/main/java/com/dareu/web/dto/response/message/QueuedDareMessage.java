@@ -11,7 +11,14 @@ public class QueuedDareMessage extends AbstractMessage {
     
     private String dareId; 
     private String creationDate; 
-    private String currentDareStatus; 
+    private String currentDareStatus;
+
+    public QueuedDareMessage(MessageType messageType, String dareId, String creationDate, String currentDareStatus) {
+        super(messageType);
+        this.dareId = dareId;
+        this.creationDate = creationDate;
+        this.currentDareStatus = currentDareStatus;
+    }
 
     public QueuedDareMessage() {
         super(MessageType.QUEUED_DARE_MESSAGE);

@@ -6,8 +6,13 @@ package com.dareu.web.dto.response.message;
  */
 public class ConnectionAcceptedMessage extends AbstractMessage{
     
-    private String friendshipId; 
-    
+    private String friendshipId;
+
+    public ConnectionAcceptedMessage(String friendshipId) {
+        super(MessageType.CONNECT_CONFIRMATION_MESSAGE);
+        this.friendshipId = friendshipId;
+    }
+
     public ConnectionAcceptedMessage(){
         super(MessageType.CONNECT_CONFIRMATION_MESSAGE); 
     }
