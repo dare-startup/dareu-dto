@@ -1,11 +1,8 @@
 package com.dareu.web.dto.jms;
 
-import java.util.Map;
-
 public class PushNotificationMessage {
     private String token;
-    private String messageType;
-    private Map<String, String> properties;
+    private NotificationMessage notificationMessage;
 
     public String getToken() {
         return token;
@@ -15,19 +12,11 @@ public class PushNotificationMessage {
         this.token = token;
     }
 
-    public String getMessageType() {
-        return messageType;
+    public NotificationMessage getNotificationMessage() {
+        return notificationMessage;
     }
 
-    public void setMessageType(String messageType) {
-        this.messageType = messageType;
-    }
-
-    public Map<String, String> getProperties() {
-        return properties;
-    }
-
-    public void setProperties(Map<String, String> properties) {
-        this.properties = properties;
+    public void setNotificationMessage(NotificationMessage notificationMessage) {
+        this.notificationMessage = notificationMessage;
     }
 }
