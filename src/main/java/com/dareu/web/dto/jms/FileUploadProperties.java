@@ -4,6 +4,14 @@ public class FileUploadProperties {
     private String currentFilePath;
     private DareuFileType fileType;
 
+    public FileUploadProperties() {
+    }
+
+    public FileUploadProperties(String currentFilePath, DareuFileType fileType) {
+        this.currentFilePath = currentFilePath;
+        this.fileType = fileType;
+    }
+
     public String getCurrentFilePath() {
         return currentFilePath;
     }
