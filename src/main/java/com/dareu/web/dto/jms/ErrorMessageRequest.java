@@ -5,6 +5,12 @@ public class ErrorMessageRequest {
     private String date;
     private String applicationId;
 
+    public ErrorMessageRequest(String body, String date, String applicationId) {
+        this.body = body;
+        this.date = date;
+        this.applicationId = applicationId;
+    }
+
     public String getBody() {
         return body;
     }
