@@ -13,6 +13,7 @@ public class AuthenticationResponse {
     private String token; 
     private String date; 
     private String message;
+	private String userRole;
     
 	public AuthenticationResponse() {
 		super();
@@ -47,7 +48,13 @@ public class AuthenticationResponse {
 
 	public void setMessage(String message) {
 		this.message = message;
-	} 
-    
-    
+	}
+
+	public String getUserRole() {
+		return userRole;
+	}
+
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
+	}
 }
