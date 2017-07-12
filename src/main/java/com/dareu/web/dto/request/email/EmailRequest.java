@@ -9,7 +9,7 @@ public final class EmailRequest {
     private String applicationId;
     private String date;
     private Object body;
-    private EmailType emailType;
+    private String emailType;
 
     public String getTitle() {
         return title;
@@ -59,11 +59,11 @@ public final class EmailRequest {
         this.body = body;
     }
 
-    public EmailType getEmailType() {
+    public String getEmailType() {
         return emailType;
     }
 
-    public void setEmailType(EmailType emailType) {
+    public void setEmailType(String emailType) {
         this.emailType = emailType;
     }
 
