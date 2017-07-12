@@ -1,4 +1,4 @@
-package com.dareu.web.dto.request.email;
+package com.dareu.web.dto.jms;
 
 import java.util.List;
 

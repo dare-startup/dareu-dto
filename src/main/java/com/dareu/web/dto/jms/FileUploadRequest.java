@@ -1,30 +1,31 @@
 package com.dareu.web.dto.jms;
 
-public class FileUploadProperties {
-    private String currentFilePath;
-    private DareuFileType fileType;
+public class FileUploadRequest {
 
-    public FileUploadProperties() {
+    private String fileName;
+    private String fileType;
+
+    public FileUploadRequest() {
     }
 
-    public FileUploadProperties(String currentFilePath, DareuFileType fileType) {
-        this.currentFilePath = currentFilePath;
+    public FileUploadRequest(String currentFilePath, String fileType) {
+        this.fileName = currentFilePath;
         this.fileType = fileType;
     }
 
-    public String getCurrentFilePath() {
-        return currentFilePath;
+    public String getFileName() {
+        return fileName;
     }
 
-    public void setCurrentFilePath(String currentFilePath) {
-        this.currentFilePath = currentFilePath;
+    public void setFileName(String currentFilePath) {
+        this.fileName = currentFilePath;
     }
 
-    public DareuFileType getFileType() {
+    public String getFileType() {
         return fileType;
     }
 
-    public void setFileType(DareuFileType fileType) {
+    public void setFileType(String fileType) {
         this.fileType = fileType;
     }
 

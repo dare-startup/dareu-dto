@@ -1,10 +1,10 @@
 package com.dareu.web.dto.jms;
 
-public class PayloadMessage {
+public class PushNotificationPayload {
     private String messageType;
     private Object data;
 
-    public PayloadMessage(String messageType, Object data) {
+    public PushNotificationPayload(String messageType, Object data) {
         this.messageType = messageType;
         this.data = data;
     }
