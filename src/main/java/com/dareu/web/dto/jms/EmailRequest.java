@@ -2,30 +2,11 @@ package com.dareu.web.dto.jms;
 
 import java.util.List;
 
-public final class EmailRequest {
-    private String title;
-    private String from;
+public final class EmailRequest<T> {
     private List<String> recipients;
     private String applicationId;
     private String date;
-    private Object body;
-    private String emailType;
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getFrom() {
-        return from;
-    }
-
-    public void setFrom(String from) {
-        this.from = from;
-    }
+    private T body;
 
     public List<String> getRecipients() {
         return recipients;
@@ -51,41 +32,11 @@ public final class EmailRequest {
         this.date = date;
     }
 
-    public Object getBody() {
+    public T getBody() {
         return body;
     }
 
-    public void setBody(Object body) {
+    public void setBody(T body) {
         this.body = body;
-    }
-
-    public String getEmailType() {
-        return emailType;
-    }
-
-    public void setEmailType(String emailType) {
-        this.emailType = emailType;
-    }
-
-    public static enum EmailType{
-        ERROR("error_email"), ANOTHER_USER_ACTION("user_email");
-
-        String type;
-        EmailType(String type){
-            this.type = type;
-        }
-
-        @Override
-        public String toString(){
-            return type;
-        }
-
-        public static EmailType fromString(String value){
-            if(value.equals(ERROR.type))
-                return ERROR;
-            else if(value.equals(ANOTHER_USER_ACTION.type))
-                return ERROR;
-            else return null;
-        }
     }
 }
