@@ -1,9 +1,5 @@
 package com.dareu.web.dto.response;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
 public class UpdatedEntityResponse {
     private String message; 
     private boolean success;

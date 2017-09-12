@@ -1,9 +1,6 @@
 package com.dareu.web.dto.response.message;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
+
 public class ClappedResponseMessage extends AbstractMessage {
 
     private String responseId;

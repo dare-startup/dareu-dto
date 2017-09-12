@@ -2,10 +2,6 @@ package com.dareu.web.dto.response.entity;
 
 import java.util.List;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
 public class AccountProfile {
     private String id; 
     private String name; 

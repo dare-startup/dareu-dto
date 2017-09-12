@@ -1,9 +1,5 @@
 package com.dareu.web.dto.request;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
 public class FlagDareRequest {
     private String dareId; 
     private String comment; 

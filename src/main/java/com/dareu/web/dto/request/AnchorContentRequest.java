@@ -1,9 +1,6 @@
 package com.dareu.web.dto.request;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
+
 public class AnchorContentRequest {
     private String responseId;
     private boolean anchored;

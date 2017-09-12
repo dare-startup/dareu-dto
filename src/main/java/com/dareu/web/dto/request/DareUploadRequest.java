@@ -2,10 +2,6 @@ package com.dareu.web.dto.request;
 
 import java.io.InputStream;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
 public class DareUploadRequest {
     private String dareId; 
     private InputStream stream; 

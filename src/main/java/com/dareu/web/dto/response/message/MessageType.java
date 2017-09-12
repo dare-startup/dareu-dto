@@ -1,9 +1,5 @@
 package com.dareu.web.dto.response.message;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
 public enum MessageType {
     NEW_COMMENT("newDareResponseCommentMessage"),
     NEW_DARE("newDareNotificationMessage"),

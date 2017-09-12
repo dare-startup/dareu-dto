@@ -1,9 +1,5 @@
 package com.dareu.web.dto.response.message;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
 public class NewDareMessage extends AbstractMessage{
     private String dareId; 
     private String dareName; 

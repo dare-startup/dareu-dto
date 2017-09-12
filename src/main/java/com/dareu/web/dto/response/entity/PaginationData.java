@@ -1,9 +1,5 @@
 package com.dareu.web.dto.response.entity;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
 public class PaginationData {
     private boolean backwardEnabled; 
     private boolean forwardEnabled; 

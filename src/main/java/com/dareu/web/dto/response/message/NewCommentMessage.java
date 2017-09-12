@@ -1,9 +1,5 @@
 package com.dareu.web.dto.response.message;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
 public class NewCommentMessage extends AbstractMessage{
     private String commentId; 
     private String responseId; 

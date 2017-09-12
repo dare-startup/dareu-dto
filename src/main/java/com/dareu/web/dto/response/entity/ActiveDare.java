@@ -1,9 +1,5 @@
 package com.dareu.web.dto.response.entity;
 
-/**
- *
- * @author Alberto Rubalcaba <arubalcaba@24hourfit.com>
- */
 public class ActiveDare {
     private String id; 
     private String name; 
